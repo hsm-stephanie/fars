@@ -1,0 +1,21 @@
+Package: fars
+Title: Functions to Read and Summarize FARS data(US National Highway Traffic Safety Administration's Fatality Analysis Reporting System)
+Version: 1.0
+Authors@R: c(person("R","Peng",role="aut"),person("S", "Hua",role="cre",email="hua@abc.edu"))
+Author: S Hua [cre], R peng [aut]
+Maintainer: S Hua <hua@abc.edu>
+Description: fars package contains functions to read in FARS data, create summary tables and create maps.
+License: GPL (>= 2)
+URL: https://github.com/hsm-stephanie/fars.git
+Depends: R (>= 3.0.2)
+Imports: dplyr,maps,graphics,tidyr,readr,magrittr
+VignetteBuilder: knitr
+Encoding: UTF-8
+LazyData: true
+Language: en-US
+NeedsCompilation: no
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat
+RoxygenNote: 7.0.2

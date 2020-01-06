@@ -1,0 +1,42 @@
+---
+title: "fars_functions examples"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{introduction}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+#load fars package
+```{r setup}
+library(fars)
+```
+#make_filename function makes a file name with a given year of interest
+```{r make_filename} 
+print(make_filename(2013))
+```
+#fars_read function reads in data file with a given filename
+```{r fars_read} 
+dat<-fars_read(make_filename(2013))
+head(dat)
+```
+#fars_read_years function reads in data of a given year and returns the months and year variables
+```{r fars_read_years}
+dat<-fars_read_years(2013)
+head(dat)
+```
+#fars_summarize_years function makes a table of total number of observations by year and month
+```{r fars_summarize_years}
+fars_summarize_years(2013)
+```
+#fars_map_state function creates a map of a given state
+#at a given year
+```{r fars_map_state}
+fars_map_state(state.num=10,year=2013)
+```
